@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <a href="./cart.html">
+                        <button type="button" class="btn btn-sm btn-primary position-relative">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span id="count"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            </span>
+                        </button>
+                    </a>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3">
+                <h2>Categories</h2>
+                <ul class="list-group" id="categories"> </ul>
+            </div>
+            <div class="col-9">
+                <h2>Liste des produits</h2>
+
+                <div class="row mb-3">
+                    <div class="col-4">
+                        <input id="search-text" type="text" class="form-control" placeholder="search...">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" onclick="search()">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <input id="prix-min" type="text" class="form-control" placeholder="Prix Min ">
+                    </div>
+                    <div class="col-2">
+                        <input id="prix-max" type="text" class="form-control" placeholder="Prix Max ">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" onclick="filter()">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="products" class="row row-cols-1 row-cols-md-3 g-4"> </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="./assets/js/controle.js"></script>
+</body>
+
+</html>
